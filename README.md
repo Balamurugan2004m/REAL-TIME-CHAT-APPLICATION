@@ -6,7 +6,7 @@ NAME: Balamurugan S
 
 INTERN ID: CT08JFJ
 
-DOMAIN: FRONT END DEVELOPMENT
+DOMAIN: Frontend Web Development
 
 DURATION: 4 WEEEKS
 
