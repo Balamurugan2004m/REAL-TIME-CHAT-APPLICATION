@@ -35,4 +35,4 @@ This application provides simple, responsive, and user-friendly chat, which can 
 
  # OUTPUT
 
- ![Image](https://github.com/user-attachments/assets/2d136082-7d5d-45d5-9f5c-6710d12dbb48)
+![Image](https://github.com/user-attachments/assets/eb7a8dca-f4d7-4375-bfd4-7b50b5ab3219)
