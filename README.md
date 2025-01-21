@@ -14,13 +14,24 @@ MENTOR: NEELA SANTOSH KUMAR
 
 # DESCRIPTION
 
-This is a Quiz Web application on which a quiz can be made to interact through a number of 10 enjoyable and engaging questions through which one gets to test himself. It aims to make a simple app easily navigable along with making an attractive appeal as it's quite basic and carries a neat view with a responsible look as of Bootstrap 4.5 with which it functions well both desktop and mobile applications.
+This is a real-time web application that lets users send and receive messages immediately. It comes with an easy-to-use interface where messages appear in a chat window. Other than that, every other message alternates between left and right alignment for better clarity. Messages are stored locally in the browser's local storage, which means the chat history is retained even after refreshing the page.
 
-The app provides each question with four possible answers, and the user selects the one they think is correct. Immediately after answering a question, the app shows whether the answer was correct or wrong and updates the score. A "Next" button allows users to move to the next question, with feedback appearing after each selection. As users continue answering, their score is displayed, and they get a sense of how well they're doing.
+# Key Features:
+Live Messaging: Messages are displayed immediately as they are sent and received.
+Alternating Message Alignment: The messages that have been sent appear on the left, and the ones received appear on the right.
+Local Storage: The chat history is persisted even after refreshing the page.
+Bootstrap Layout: The design is responsive and clean, built using Bootstrap.
 
-When the quiz has been finished, the user is presented with their final score and given the option to restart or close the quiz. The clean lines and intuitive interfaces make it easy to navigate, and the app runs quickly, uncluttered by unnecessary distractions.
- 
- This is one of those web apps that any user can learn from, have fun with, and test themselves on while being given instant feedback.
+# Technology Stack:
+HTML/CSS for structure and design.
+JavaScript for functionality, including real-time communication with Socket.io.
+Local Storage for message persistence.
+
+# User Flow:
+Users type a message and hit 'Send'.
+Altsalerin messages in the chat box;
+Messages survive a page reload using local storage
+This application provides simple, responsive, and user-friendly chat, which can be useful for fairly basic real-time communication needs.
 
  # OUTPUT
 
