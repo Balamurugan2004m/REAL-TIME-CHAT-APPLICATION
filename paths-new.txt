@@ -1,0 +1,526 @@
+// paths.ts
+export type Route = {
+    name: string;
+    pathName: string;
+};
+
+export const paths: Record<string, Route> = {
+    // ── Public / Auth ─────────────────────────────────────────────
+    LOGIN: {
+        name: "Login",
+        pathName: "/login",
+    },
+    WELCOME_REGISTRATION: {
+        name: "WelcomeRegistration",
+        pathName: "/welcome-registration",
+    },
+    LINK_EXPIRED:{
+        name: "LinkExpired",
+        pathName: "/link-expired",
+    },
+    ForgotPassword: {
+        name: "ForgotPassword",
+
+        pathName: "/forgot-password",
+    },
+    OTP_VALIDATION: {
+        name: "OtpValidation",
+        pathName: "/otp-validation",
+    },
+    MFA_METHOD: {
+        name: "MfaMethodSelector",
+        pathName: "/mfa-method",
+    },
+    EMAIL_VERIFICATION: {
+        name: "EmailVerification",
+        pathName: "/email-verification",
+    },
+    TERMS_AND_CONDITIONS: {
+        name: "TermsAndConditions",
+        pathName: "/terms-and-conditions",
+    },
+    // Notice is no longer a standalone route — it is shown as a modal on the Login page.
+    TERMS_OF_SERVICE: {
+        name: "TermsOfService",
+        pathName: "/terms-of-service",
+    },
+    EMAIL_CONFIRMATION: {
+        name: "EmailConfirmation",
+        pathName: "/email-confirmation",
+    },
+    UNAUTHORIZED: {
+        name: "Unauthorized",
+        pathName: "/unauthorized",
+    },
+    SOMETHING_WENT_WRONG: {
+        name: "SomethingWentWrong",
+        pathName: "/something-went-wrong",
+    },
+    NOT_FOUND: {
+        name: "NotFound",
+        pathName: "/not-found",
+    },
+
+    // ── Main app / dashboard ──────────────────────────────────────
+    HOME: {
+        name: "Home",
+        pathName: "/home",
+    },
+
+    WORK_QUEUES: {
+        name: "Work Queues",
+        pathName: "/work-queues",
+    },
+
+    PROVIDER_HOME: {
+        name: "ProviderHome",
+        pathName: "/provider-home",
+    },
+    DOT_PHRASE: {
+        name: "Dot Phrases",
+        pathName: "/dot-phrase",
+    },
+    VETERAN_TRAVEL: {
+        name: "Veteran Travel",
+        pathName: "/veteran-travel",
+    },
+    TRAVEL_INSTANCE_CLAIM_REPORT: {
+        name: "Travel Instance Claim Report",
+        pathName: "/veteran-travel/instance-claim-report",
+    },
+    TRAVEL_PAYMENT_UPLOAD: {
+        name: "Travel Payment Upload",
+        pathName: "/veteran-travel/payment-upload",
+    },
+
+    SYSTEM_ANNOUNCEMENTS: {
+        name: "SystemAnnouncements",
+        pathName: "/system-announcements",
+    },
+
+    AUTO_QUEUE_ADMIN: {
+        name: "AutoQueueAdmin",
+        pathName: "/auto-queue",
+    },
+
+     ESR_TAGS: {
+        name: "EsrTags",
+        pathName: "/esr-tags",
+    },
+
+    DBQ_APT_TIMES: {
+        name: "DbqAptTimes",
+        pathName: "/dbq-apt-times",
+    },
+
+    CLUSTERS_CONFIG: {
+        name: "ClustersConfig",
+        pathName: "/clusters-config",
+    },
+
+    // ── Configuration / Users / Roles ─────────────────────────────
+    CONFIGURATION: {
+        name: "Configuration",
+        pathName: "/configuration",
+    },
+    USERS: {
+        name: "Users",
+        pathName: "/configuration/users",
+    },
+    USER_DETAILS: {
+        name: "UserDetails",
+        pathName: "/configuration/users/:userId",
+    },
+    USER_CREATE: {
+        name: "AddUser",
+        pathName: "/configuration/users/create",
+    },
+
+    ACCOMMODATION_CONFIG: {
+        name: "Accommodation Config",
+        pathName: "/configuration/accommodation",
+    },
+    ACCOMMODATION_CONFIG_ADD: {
+        name: "Add Accommodation",
+        pathName: "/configuration/accommodation/add",
+    },
+    PROVIDER_MANAGEMENT_ORG: {
+        name: "Provider Organization",
+        pathName: "/provider-management/provider-organization",
+    },
+    PROVIDER_MANAGEMENT_ORG_CREATE: {
+        name: "Add Organization",
+        pathName: "/provider-management/provider-organization/create",
+    },
+    PROVIDER_MANAGEMENT_ORG_DETAILS: {
+        name: "Organization Details",
+        pathName: "/provider-management/provider-organization/:orgId",
+    },
+    PROVIDER_MANAGEMENT_ORG_FACILITY: {
+        name: "Facility Details",
+        pathName: "/provider-management/provider-organization/:orgId/facility/:facilityId",
+    },
+    // Roles
+    ROLES: {
+        name: "Roles",
+        pathName: "/configuration/roles",
+    },
+    DOT_PHRASE_ADMIN: {
+        name: "DOTPhrase Admin",
+        pathName: "/configuration/dot-phrase",
+    },
+    CPT_CONFIG: {
+        name: "CPT Config",
+        pathName: "/configuration/cpt-config",
+    },
+    ROLE_CREATE: {
+        name: "AddRole",
+        pathName: "/configuration/roles/create",
+    },
+    ROLE_EDIT: {
+        name: "EditRole",
+        pathName: "/configuration/roles/edit/:name/:type/:id",
+    },
+
+    // ── Billing ───────────────────────────────────────────────────
+    CLUSTER: {
+        name: "Cluster",
+        pathName: "/cluster",
+    },
+    ESR_TAG: {
+        name: "ESR Tag",
+        pathName: "/esr-tag",
+    },
+    ACCOMMODATION: {
+        name: "Accommodation",
+        pathName: "/accommodation",
+    },
+    CPT: {
+        name: "CPT",
+        pathName: "/cpt",
+    },
+    DBQ_APT_TIMES: {
+        name: "DBQ Apt Times",
+        pathName: "/dbq-apt-times",
+    },
+    ORGANIZATION: {
+        name: "Organization",
+        pathName: "/organization",
+    },
+    PROVIDER_MANAGEMENT_USER: {
+        name: "User",
+        pathName: "/provider-management-user",
+    },
+    USER_DBQ_TRAINING: {
+        name: "User DBQ Training",
+        pathName: "/user-dbq-training",
+    },
+    PROVIDER_TRAINING_LIST: {
+        name: "Provider Training List",
+        pathName: "/provider-training-list",
+    },
+    TRAINING_UPLOAD: {
+        name: "Training Upload",
+        pathName: "/training-upload",
+    },
+    PROVIDER_DBQ_BURDEN_TIME: {
+        name: "Provider DBQ Burden Time",
+        pathName: "/provider-dbq-burden-time",
+    },
+    AVAILABILITY_CALENDAR: {
+        name: "Availability Calendar",
+        pathName: "/provider-calendar",
+    },
+    BILLING: {
+        name: "Billing",
+        pathName: "/billing",
+    },
+
+    // ── Reports (all use AccountUsers component) ──────────────────
+    REPORTS: {
+        name: "VA Reports",
+        pathName: "/va-reports",
+    },
+    MONTHLY_REPORTS: {
+        name: "Monthly Reports",
+        pathName: "/monthly-reports",
+    },
+    EXAM_ARCHIVE: {
+        name: "Exam Archive",
+        pathName: "/exam-archive",
+    },
+    TRAVEL_REPORTS: {
+        name: "Travel Reports",
+        pathName: "/travel-reports",
+    },
+    REWORK_REPORTS: {
+        name: "Re-work Reports",
+        pathName: "/re-work",
+    },
+
+    // ── Provider calendar & management ────────────────────────────
+    PROVIDER_CALENDAR: {
+        name: "Availability Calendar",
+        pathName: "/provider-calendar",
+    },
+    TRAVEL_INSTANCE_CLAIM_REPORT: {
+        name: "Travel Instance Claim Report",
+        pathName: "/travel-instance-claim-report",
+    },
+    TRAVEL_PAYMENT_UPLOAD: {
+        name: "Travel Payment Upload",
+        pathName: "/travel-payment-upload",
+    },
+    VBMS_INVOICE_FILES: {
+        name: "VBMS Invoice Files",
+        pathName: "/vbms-invoice-files",
+    },
+    LAB_NON_LAB_PRICE_UPLOAD: {
+        name: "Lab & Non-Lab Price Upload",
+        pathName: "/lab-non-lab-price-upload",
+    },
+    BILLING_RATE_MASTER: {
+        name: "Billing Rate Master",
+        pathName: "/billing-rate-master",
+    },
+
+    PROVIDER_MANAGEMENT: {
+        name: "Provider Management",
+        pathName: "/provider-management",
+    },
+    PROVIDER_MANAGEMENT_USERS: {
+        name: "Provider Users",
+        pathName: "/provider-management/users",
+    },
+    PROVIDER_MANAGEMENT_USER_DETAILS: {
+        name: "Provider User Details",
+        pathName: "/provider-management/users/:userId",
+    },
+    PROVIDER_MANAGEMENT_USER_CREATE: {
+        name: "Provider User Create",
+        pathName: "/provider-management/users/create",
+    },
+    PROVIDER_MANAGEMENT_FACILITIES: {
+        name: "provider List",
+        pathName: "/provider-management/facilities",
+    },
+    PROVIDER_MANAGEMENT_USER_DBQ_TRAINING: {
+        name: "User DBQ Training",
+        pathName: "/provider-management/user-dbq-training",
+    },
+    PROVIDER_MANAGEMENT_USER_DBQ_TRAINING_DETAILS: {
+        name: "User DBQ Training Details",
+        pathName: "/provider-management/user-dbq-training/:userId",
+    },
+    PROVIDER_MANAGEMENT_USER_DBQ_TRAINING_CREATE: {
+        name: "User DBQ Training Create",
+        pathName: "/provider-management/user-dbq-training/create",
+    },
+    PROVIDER_MANAGEMENT_PROVIDER_TRAINING_LIST: {
+        name: "Provider Training List",
+        pathName: "/provider-management/provider-training-list",
+    },
+    PROVIDER_TRAINING_UPLOAD: {
+        name: "Provider Training Upload",
+        pathName: "/provider-management/provider-training-upload",
+    },
+    PROVIDER_MANAGEMENT_DBQ_BURDEN_TIME: {
+        name: "Provider DBQ Burden Time",
+        pathName: "/provider-management/provider-dbq-burden-time",
+    },
+    PROVIDER_MANAGEMENT_DBQ_BURDEN_TIME_TEMPLATES: {
+        name: "Provider DBQ Burden Time Templates",
+        pathName: "/provider-management/provider-dbq-burden-time/templates",
+    },
+    PROVIDER_MANAGEMENT_DBQ_BURDEN_TIME_TEMPLATE_DETAIL: {
+        name: "Provider DBQ Burden Time Template Detail",
+        pathName: "/provider-management/provider-dbq-burden-time/templates/:templateId",
+    },
+
+    // ── Case search & case layout ─────────────────────────────────
+    CASE_SEARCH: {
+        name: "Case Search",
+        pathName: "/case-search",
+    },
+    CASE_LAYOUT: {
+        name: "Case Layout",
+        pathName: "/case-details/:caseId",
+    },
+
+    // Case sub-routes (under /case-details/:caseId)
+    CASE_ACE_ELIGIBLE: {
+        name: "ACE Eligible",
+        pathName: "/case-details/:caseId/ace-eligible",
+    },
+    CASE_APPOINTMENT_HISTORY_DETAILS: {
+        name: "Appointment History Details",
+        pathName: "/case-details/:caseId/appointment-history-details",
+    },
+    CASE_COMMENTS: {
+        name: "Case Comments",
+        pathName: "/case-details/:caseId/case-comments",
+    },
+    CASE_HISTORY: {
+        name: "Case History",
+        pathName: "/case-details/:caseId/case-history",
+    },
+    CASE_NOTES: {
+        name: "Case Notes",
+        pathName: "/case-details/:caseId/case-notes",
+    },
+    CASE_CLARIFICATION_DETAILS: {
+        name: "Clarification Details",
+        pathName: "/case-details/:caseId/clarification-details",
+    },
+    CASE_CLARIFICATION_RESPONSE_CHANGE_HISTORY: {
+        name: "Clarification Response Change History",
+        pathName: "/case-details/:caseId/clarification-response-change-history",
+    },
+    CASE_DOCUMENTS: {
+        name: "Documents",
+        pathName: "/case-details/:caseId/documents",
+    },
+    CASE_NARRATIVE: {
+        name: "Narrative",
+        pathName: "/case-details/:caseId/narratives",
+    },
+    CASE_AUDITS: {
+        name: "Audits",
+        pathName: "/case-details/:caseId/history",
+    },
+    CASE_EXAMS: {
+        name: "Exams",
+        pathName: "/case-details/:caseId/exam-processing",
+    },
+    CASE_APPOINTMENTS: {
+        name: "Appointments",
+        pathName: "/case-details/:caseId/appointments",
+    },
+    CASE_CLARIFICATIONS: {
+        name: "Clarifications",
+        pathName: "/case-details/:caseId/clarifications",
+    },
+    CASE_VETERAN_TRAVEL: {
+        name: "Veteran Travel",
+        pathName: "/case-details/:caseId/travel-claims",
+    },
+    CASE_EXAM_HISTORY: {
+        name: "Exam History",
+        pathName: "/case-details/:caseId/exam-history",
+    },
+    CASE_EXAMINATION_NARRATIVE_FROM_VA: {
+        name: "Examination Narrative From VA",
+        pathName: "/case-details/:caseId/examination-narrative-from-va",
+    },
+    CASE_EXISTING_DISABILITIES_FROM_VA: {
+        name: "Existing Disabilities From VA",
+        pathName: "/case-details/:caseId/existing-disabilities-from-va",
+    },
+    CASE_PRIORITY_CASE_PROCESSING: {
+        name: "Priority Case Processing",
+        pathName: "/case-details/:caseId/priority-case-processing",
+    },
+    CASE_QA: {
+        name: "QA Review",
+        pathName: "/case-details/:caseId/qa-review",
+    },
+    CASE_FCR: {
+        name: "Final Contention Review",
+        pathName: "/case-details/:caseId/final-contention-review",
+    },
+    CASE_MOS: {
+        name: "MOS",
+        pathName: "/case-details/:caseId/mos",
+    },
+    CASE_TRAVEL_CLAIM_DETAILS: {
+        name: "Travel Claim Details",
+        pathName: "/case-details/:caseId/travel-claim-details",
+    },
+    CASE_TRAVEL_ACCORDIONS: {
+        name: "Travel Accordions",
+        pathName: "/case-details/:caseId/travel-accordions/:targetCaseId",
+    },
+
+    PROVIDER_LAYOUT: {
+        name: "MDE Layout",
+        pathName: "/provider/:providerId",
+    },
+
+    PROVIDER_EXAMINATION_NARRATIVES: {
+        name: "Examination Narrative",
+        pathName: "/provider/:providerId/exam-narrative",
+    },
+    PROVIDER_CONTENTION_NARRATIVES: {
+        name: "Contention Narratives",
+        pathName: "/provider/:providerId/contention-narratives",  
+    },
+    
+    PROVIDER_EXISTING_DISABILITIES: {
+        name: "Existing Disabilities",
+        pathName: "/provider/:providerId/existing-disabilities",
+    },
+    PROVIDER_ORIGINAL_CASE_DBQ: {
+        name: "Original Case DBQ",
+        pathName: "/provider/:providerId/original-case-dbq",
+    },
+    PROVIDER_PRIORITY_CASE_PROCESSING: {
+        name: "Priority Case Processing",
+        pathName: "/provider/:providerId/priority-case-processing",
+    },
+    PROVIDER_MEDICAL_RECORDS: {
+        name: "Medical Records",
+        pathName: "/provider/:providerId/medical-records",
+    },
+    PROVIDER_MEDICAL_OPINION_QUESTIONS_FROM_VA: {
+        name: "Medical Opinion Questions from VA",
+        pathName: "/provider/:providerId/medical-opinion",
+    },
+    PROVIDER_EXAM_HISTORY: {
+        name: "Exam History",
+        pathName: "/provider/:providerId/exam-history",
+    },
+    PROVIDER_CLARIFICATION_HISTORY: {
+        name: "Clarification History",
+        pathName: "/provider/:providerId/clarification-history",
+    },
+    PROVIDER_CASE_COMMENTS: {
+        name: "Case Comments",
+        pathName: "/provider/:providerId/case-comments", 
+    },
+    PROVIDER_ADD_DIAGNOSTIC: {
+        name: "Add Diagnostic",
+        pathName: "/provider/:providerId/add-diagnostic",
+    },
+    PROVIDER_ADDITIONAL_DBQS: {
+        name: "Additional DBQs",
+        pathName: "/provider/:providerId/additional-dbqs",
+    },
+    PROVIDER_QUESTIONNAIRE: {
+        name: "Questionnaire",
+        pathName: "/provider/:providerId/questionnaire",
+    },
+    PROVIDER_QUESTIONNAIRE_PREVIEW: {
+        name: "Questionnaire Preview",
+        pathName: "/provider/:providerId/questionnaire-preview",
+    },
+    DBQ_BUILDER: {
+        name: "DBQ Builder",
+        pathName: "/dbq-builder",
+    },
+
+    // ── Misc / redirect ───────────────────────────────────────────
+    INDEX: {
+        name: "IndexRedirect",
+        pathName: "/index",
+    },
+};
+
+export const buildRoleEditPath = (
+    name: string,
+    userTypeRole: string,
+    applicationRoleId: string
+) =>
+    paths.ROLE_EDIT.pathName
+        .replace(":name", encodeURIComponent(name))
+        .replace(":type", encodeURIComponent(userTypeRole))
+        .replace(":id", encodeURIComponent(applicationRoleId));

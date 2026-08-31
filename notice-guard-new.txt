@@ -1,0 +1,15 @@
+/**
+ * NoticeGuard — previously redirected unauthenticated users to the /notice page.
+ * The notice is now a modal on the Login page, so this guard simply passes
+ * children through. It is kept as a no-op wrapper so existing usages in
+ * app-routes.tsx compile without changes.
+ */
+const NoticeGuard = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  return <>{children}</>;
+};
+
+export default NoticeGuard;
